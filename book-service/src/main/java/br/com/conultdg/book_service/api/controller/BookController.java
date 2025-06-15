@@ -33,10 +33,10 @@ public class BookController {
 	public Book getBook(@PathVariable("id")Long id, @PathVariable("currency") String currency) {
 		var book = repo.findById(id).orElseThrow();
 		var port = environment.getProperty("local.server.port");
-		book.setEnvironment(port);
-		book.setCurrency(currency);
-		
-		var cambio = proxy.getCambio(BigDecimal.valueOf(book.getPrice()), "USD", currency);		
+		var cambio = proxy.getCambio(BigDecimal.valueOf(book.getPrice()), "USD", currency);	
+		book.setEnvironment("book-service port:"+port+"\ncambio-service port: "+ cambio.getEnvironment());
+		book.setCurrency(currency);		
+			
 		book.setPrice(Double.valueOf(cambio.getConvertedValue().toString()));
 		return book;
 	}
