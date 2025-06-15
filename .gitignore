@@ -3,3 +3,7 @@ cambio-service/target/
 .vscode/
 book-service/.project
 book-service/target/
+naming-server/.project
+naming-server/target/
+api-gateway/.project
+api-gateway/target/

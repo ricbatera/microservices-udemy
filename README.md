@@ -2,6 +2,12 @@
 
 Este repositório é dedicado ao estudo e prática de arquitetura de microserviços. O projeto atualmente conta com dois serviços principais:
 
+## Eureka Server (Naming Server)
+
+O projeto inclui a implementação do **Eureka Server** como servidor de registro (naming server) para facilitar a descoberta de serviços entre os microserviços. O Eureka Server está localizado no diretório `naming-server` e deve ser iniciado antes dos demais serviços para que possam se registrar e se comunicar dinamicamente.
+
+Consulte a documentação no diretório `naming-server` para instruções detalhadas de execução.
+
 ## Serviços
 
 - **cambio-service**  
