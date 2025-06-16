@@ -8,6 +8,12 @@ O projeto inclui a implementação do **Eureka Server** como servidor de registr
 
 Consulte a documentação no diretório `naming-server` para instruções detalhadas de execução.
 
+## API Gateway
+
+O projeto também conta com um **API Gateway**, responsável por rotear as requisições e balancear a carga entre as diferentes instâncias dos microserviços. O API Gateway facilita a centralização do acesso, segurança e monitoramento, além de permitir o balanceamento eficiente das chamadas entre os serviços.
+
+Consulte o diretório `api-gateway` para mais informações e instruções de execução.
+
 ## Serviços
 
 - **cambio-service**  
