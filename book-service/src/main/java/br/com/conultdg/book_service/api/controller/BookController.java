@@ -15,7 +15,10 @@ import br.com.conultdg.book_service.dto.Cambio;
 import br.com.conultdg.book_service.model.Book;
 import br.com.conultdg.book_service.proxy.CambioProxy;
 import br.com.conultdg.book_service.repository.BookRepository;
+import io.swagger.v3.oas.annotations.Operation;
+import io.swagger.v3.oas.annotations.tags.Tag;
 
+@Tag(name = "Book Endpoints")
 @RestController
 @RequestMapping("/book-service")
 public class BookController {
@@ -29,6 +32,7 @@ public class BookController {
 	@Autowired
 	private CambioProxy proxy;
 	
+	@Operation(summary = "Buscar um livro especifico por ID")
 	@GetMapping(value = "/{id}/{currency}")
 	public Book getBook(@PathVariable("id")Long id, @PathVariable("currency") String currency) {
 		var book = repo.findById(id).orElseThrow();

@@ -18,9 +18,11 @@ Consulte o diretório `api-gateway` para mais informações e instruções de ex
 
 - **cambio-service**  
     Serviço responsável por realizar conversão de moedas. Disponibiliza endpoints para consultar taxas de câmbio e converter valores entre diferentes moedas.
+    Além disso, o **cambio-service** possui uma documentação interativa disponível via Swagger, permitindo explorar e testar os endpoints diretamente pelo navegador.
 
 - **book-service**  
     Serviço para gerenciamento de cadastros de livros. Permite operações como criação, atualização, listagem e remoção de livros.
+    Além disso, o **book-service** possui uma documentação interativa disponível via Swagger, permitindo explorar e testar os endpoints diretamente pelo navegador.
 
 ## Objetivo
 
