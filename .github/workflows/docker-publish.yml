@@ -11,7 +11,7 @@ jobs:
     strategy:
       matrix:
         service:
-          - maning-service
+          - naning-service
           - api-gateway
           - book-service
           - cambio-service
@@ -24,17 +24,18 @@ jobs:
         with:
           distribution: 'temurin'
           java-version: '17'
+      
+      - name: List files in the repository
+        run: ls -l
           
       - name: Build with Maven
         run: |
           cd ${{ matrix.service }}
-          ls -l
           mvn spring-boot:build-image -DskipTests
 
       - name: Build with Maven
         run: |
           cd ${{ matrix.service }}
-          ls -l
           mvn spring-boot:build-image -DskipTests
 
       - name: Log in to Docker Hub
