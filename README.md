@@ -24,6 +24,12 @@ Consulte o diretório `api-gateway` para mais informações e instruções de ex
     Serviço para gerenciamento de cadastros de livros. Permite operações como criação, atualização, listagem e remoção de livros.
     Além disso, o **book-service** possui uma documentação interativa disponível via Swagger, permitindo explorar e testar os endpoints diretamente pelo navegador.
 
+    ## Observabilidade com Zipkin
+
+    O projeto integra o **Zipkin** para rastreamento distribuído (distributed tracing) nos dois microserviços (**cambio-service** e **book-service**) e no **API Gateway**. Com o Zipkin, é possível monitorar o fluxo das requisições entre os serviços, facilitando a identificação de gargalos e a análise de desempenho em ambientes distribuídos.
+
+    Consulte a documentação de cada serviço para detalhes sobre configuração e acesso ao painel do Zipkin.
+
 ## Objetivo
 
 O objetivo deste projeto é aprofundar conhecimentos em microserviços, explorando conceitos como comunicação entre serviços, escalabilidade, e boas práticas de desenvolvimento distribuído.
