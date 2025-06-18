@@ -11,7 +11,7 @@ jobs:
     strategy:
       matrix:
         service:
-          - naning-service
+          - naming-server
           - api-gateway
           - book-service
           - cambio-service
