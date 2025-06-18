@@ -13,16 +13,19 @@ Consulte a documentação no diretório `naming-server` para instruções detalh
 O projeto também conta com um **API Gateway**, responsável por rotear as requisições e balancear a carga entre as diferentes instâncias dos microserviços. O API Gateway facilita a centralização do acesso, segurança e monitoramento, além de permitir o balanceamento eficiente das chamadas entre os serviços.
 
 Consulte o diretório `api-gateway` para mais informações e instruções de execução.
+ Comando para gerar a imagem docker da api-gateway: mvn spring-boot:build-image -DskipTests
 
 ## Serviços
 
 - **cambio-service**  
     Serviço responsável por realizar conversão de moedas. Disponibiliza endpoints para consultar taxas de câmbio e converter valores entre diferentes moedas.
     Além disso, o **cambio-service** possui uma documentação interativa disponível via Swagger, permitindo explorar e testar os endpoints diretamente pelo navegador.
+    Comando para gerar a imagem docker do micorserviço: mvn spring-boot:build-image -DskipTests
 
 - **book-service**  
     Serviço para gerenciamento de cadastros de livros. Permite operações como criação, atualização, listagem e remoção de livros.
     Além disso, o **book-service** possui uma documentação interativa disponível via Swagger, permitindo explorar e testar os endpoints diretamente pelo navegador.
+    Comando para gerar a imagem docker do micorserviço: mvn spring-boot:build-image -DskipTests
 
     ## Observabilidade com Zipkin
 
