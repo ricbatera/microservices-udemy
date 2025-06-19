@@ -12,9 +12,9 @@ jobs:
       matrix:
         service:
           - naming-server
-          - api-gateway
-          - book-service
-          - cambio-service
+          # - api-gateway
+          # - book-service
+          # - cambio-service
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -46,7 +46,7 @@ jobs:
 
       - name: Build and push Docker image (with tags)
         run: |
-          IMAGE_NAME=ricardo1782/${{ matrix.service }}
+          IMAGE_NAME=${{ secrets.DOCKERHUB_USER }}/${{ matrix.service }}
           TAG=0.0.1-SNAPSHOT
           cd ${{ matrix.service }}
           docker build -t $IMAGE_NAME:$TAG -t $IMAGE_NAME:latest .
