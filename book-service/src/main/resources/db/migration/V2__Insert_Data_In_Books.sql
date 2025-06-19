@@ -13,4 +13,5 @@
 	('Viktor Mayer-Schonberger e Kenneth Kukier', '2017-11-07 15:09:01.674000', 9.44, 'Big Data: como extrair volume, variedade, velocidade e valor da avalanche de informação cotidiana'),
 	('Richard Hunter e George Westerman', '2017-11-07 15:09:01.674000', 16.61, 'O verdadeiro valor de TI'),
 	('Marc J. Schiller', '2017-11-07 15:09:01.674000', 7.87, 'Os 11 segredos de líderes de TI altamente influentes'),
-	('Aguinaldo Aragon Fernandes e Vladimir Ferraz de Abreu', '2017-11-07 15:09:01.674000', 9.44, 'Implantando a governança de TI');
+	('Aguinaldo Aragon Fernandes e Vladimir Ferraz de Abreu', '2017-11-07 15:09:01.674000', 9.44, 'Implantando a governança de TI'),
+	('Deitel', '2017-11-07 15:09:01.674000', 12.99, 'Java: como programar');

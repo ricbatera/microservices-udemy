@@ -1,7 +1,7 @@
 version: '3.8'
 services:
   naming-server:
-    image: ricardo1782/naming-server:latest
+    image: ricardo1782/naming-server:0.0.1-SNAPSHOT
     container_name: naming-service-eureka
     ports:
       - "8761:8761"
@@ -19,7 +19,7 @@ services:
     networks:
       - consultDg-network
   api-gateway:
-    image: ricardo1782/api-gateway:latest
+    image: ricardo1782/api-gateway:0.0.1-SNAPSHOT
     container_name: api-gateway
     ports:
       - "8765:8765"
@@ -32,9 +32,12 @@ services:
     networks:
       - consultDg-network
   cambio-service:
-    image: ricardo1782/cambio-service:latest
+    image: ricardo1782/cambio-service
     container_name: cambio-service
     restart: unless-stopped
+    build: 
+      context: ./cambio-service
+      dockerfile: Dockerfile
     ports:
       - "8000:8000"
     depends_on:
@@ -100,9 +103,12 @@ services:
       timeout: 5s
       retries: 5
   book-service:
-    image: ricardo1782/book-service:latest
+    image: ricardo1782/book-service
     container_name: book-service
     restart: unless-stopped
+    build: 
+      context: ./book-service
+      dockerfile: Dockerfile
     ports:
       - "8100:8100"
     depends_on:
