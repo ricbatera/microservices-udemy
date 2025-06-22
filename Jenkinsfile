@@ -9,7 +9,7 @@ pipeline {
     stages {
         stage('Clonar código') {
             steps {
-                git branch: 'master', url: 'https://github.com/ricbatera/microservices-udemy.git'
+                git branch: 'main', url: 'https://github.com/ricbatera/microservices-udemy.git'
             }
         }
 
