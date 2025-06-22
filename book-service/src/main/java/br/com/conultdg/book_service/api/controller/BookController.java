@@ -5,6 +5,7 @@ import java.util.HashMap;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.env.Environment;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -21,6 +22,7 @@ import io.swagger.v3.oas.annotations.tags.Tag;
 @Tag(name = "Book Endpoints")
 @RestController
 @RequestMapping("/book-service")
+@CrossOrigin(origins = "*")
 public class BookController {
 	
 	@Autowired
